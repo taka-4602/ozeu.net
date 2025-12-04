@@ -32,7 +32,7 @@ ozeu.net/
 ├── README.md           # プロジェクト説明
 ├── .github/            # GitHub設定
 │   ├── prompts/        # プロンプトテンプレート集
-　　　
+|   ├── youkenteigi.md    # 要件定義書
 │   ├── code-style.md   # コーディング規約
 │   └── copilot-instructions.md
 ├── .gitignore
