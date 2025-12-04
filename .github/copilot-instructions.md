@@ -22,17 +22,18 @@
 - フレームワーク: discord.py-selfbot
 - 開発環境: Mac
 - buildツール: 指定なし
-- デプロイ: xserver freeプラン
+- デプロイ: cf
 - 文字エンコーディング: UTF-8
 - 国際化: 日本語 (ja) デフォルト
-
+また二人で開発を行いますもう１人はwindows環境ですまたRepositoryをクローンしたときの環境構築の仕方もわかるようなものをおいておくと親切でしょう
 ## Project Structure
 ```
-discord_remindselfbot/
+ozeu.net/
 ├── main.py              # メインボットファイル
 ├── README.md           # プロジェクト説明
 ├── .github/            # GitHub設定
 │   ├── prompts/        # プロンプトテンプレート集
+　　　
 │   ├── code-style.md   # コーディング規約
 │   └── copilot-instructions.md
 ├── .gitignore
