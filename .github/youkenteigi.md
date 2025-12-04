@@ -40,7 +40,7 @@ UI
 - ルーティング雛形作成（Home, Tools, Gallery, About, Contact）
 - data/ にサンプルJSON（ツール・作品）を配置
 - Tailwind設定（基本テーマのみ）
-- cfpagesへデプロイ検証
+
 
 # おぜう公式サイト 要件定義書（React＋JavaScript）
 
