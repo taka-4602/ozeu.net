@@ -8,24 +8,28 @@
 1. `prompts/common/base-config.md` - 基本開発環境設定
 2. `prompts/common/response-rules.md` - AI回答規則
 3. `prompts/common/development-guidelines.md` - 共通開発規約
+4. .github/prompts/frameworks/template-react.md - React開発規約
 
 ### 2. 言語別設定
-4. `prompts/languages/template-python.md` - Python開発規約
+4. `prompts/languages/template-javascript.md` - JavaScript開発規約
 
 ### 3. プロジェクト固有設定（最優先）
-5. `prompts/projects/discord-selfbot.md` - Discord SelfBot固有設定
+5. `.github/youkenteigi.md-` - 要件定義固有設定
 
 ## Project Overview
 
 ## Technical Specifications
-- 使用言語: Python 3.8+
-- フレームワーク: discord.py-selfbot
-- 開発環境: Mac
+- 使用言語:  Javascript
+- フレームワーク: React + Vite
+- ルーティング: React Router
+- スタイリング: MODULE CSS
+
 - buildツール: 指定なし
 - デプロイ: cf
 - 文字エンコーディング: UTF-8
 - 国際化: 日本語 (ja) デフォルト
 また二人で開発を行いますもう１人はwindows環境ですまたRepositoryをクローンしたときの環境構築の仕方もわかるようなものをおいておくと親切でしょう
+またこのmdはGitHubにプッシュされており私（win環境で他のフォルダの位置にビルドしてる可能性があります）なので会話がリセットされたりしたらパスなどを聞いて下さい
 ## Project Structure
 ```
 ozeu.net/
