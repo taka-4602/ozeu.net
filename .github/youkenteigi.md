@@ -91,22 +91,10 @@ UI
 - レスポンシブ: 320px〜大型ディスプレイ対応
 - コンポーネント設計: ヘッダー、フッター、カード、モーダル、タグピル、パンくず等の再利用
 - アニメーション: フェード、ホバー、モーダル開閉、スクロール時の遅延表示
-- アクセシビリティ: ARIA属性、キーボード操作対応、コントラスト遵守
-
-### 3.3 コンテンツ管理
-- ツールデータ: JSON/Markdownメタデータ（title, description, useCases[], cautions[], setupGuideURL, repoURL, tags[], lastUpdated）
-- 作品データ: JSON（title, description, imageURL, author, tags[], createdAt）
-- ニュース／お知らせ: JSON（title, body, publishedAt, tags[]）
 
 ## 4. 非機能要件
 - パフォーマンス: LCP 2.5s以下、画像遅延読み込み、コード分割（ルート単位）
 - セキュリティ:
-  - お問い合わせフォームのXSS/CSRF対策
-  - 外部リンクの安全属性付与（rel="noopener noreferrer"）
-  - セキュリティテストは検証用環境のみの記述に限定
-- SEO: メタタグ、OGP、構造化データ（Breadcrumb、Article）
-- ログ・分析: GAまたは軽量代替（将来導入）
-- 品質: ESLint＋Prettier、型補助にJSDoc導入可
 
 ## 5. 互換性要件
 - ブラウザ: 最新版のChrome/Firefox/Safari/Edge
@@ -120,7 +108,6 @@ src/
   components/    # 共通UI
   pages/         # 各ページ
   routes/        # ルーティング定義
-  data/          # JSON/Markdownコンテンツ
   styles/        # グローバルスタイル
   utils/         # 共通関数
 index.html
@@ -128,33 +115,8 @@ vite.config.ts（またはjs）
 ```
 - 主要依存: react, react-dom, react-router-dom, tailwindcss, vite
 
-## 7. データモデル例
-- Tool
-  - id: string
-  - name: string
-  - description: string
-  - useCases: string[]
-  - cautions: string[]
-  - setupGuideURL: string
-  - repoURL: string
-  - tags: string[]
-  - lastUpdated: string
-- Artwork
-  - id: string
-  - title: string
-  - description: string
-  - imageURL: string
-  - author: string
-  - tags: string[]
-  - createdAt: string
-- News
-  - id: string
-  - title: string
-  - body: string
-  - publishedAt: string
-  - tags: string[]
 
-## 8. コンポーネント要件
+## 7. コンポーネント要件
 - ToolCard: ツール概要カード（タグ、外部リンク）
 - ToolDetail: 詳細説明＋注意事項セクション
 - GalleryGrid: 画像グリッド（Lazy Load対応）

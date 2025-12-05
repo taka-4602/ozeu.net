@@ -1,10 +1,10 @@
 import React from 'react'
-import styles from './Home.module.css'
+import styles from './About.module.css'
 
-export default function Home() {
+export default function About() {
   return (
     <div className={styles.container}>
-      <h2 className={styles.title}>Home</h2>
+      <h2 className={styles.title}>About</h2>
       <div className={styles.body}>test</div>
     </div>
   )

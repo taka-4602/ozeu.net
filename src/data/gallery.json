@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "title": "Cyberpunk City",
+    "description": "A sprawling metropolis of the future, illuminated by neon lights.",
+    "imageURL": "/images/art/cyberpunk_city.webp",
+    "author": "Artist A",
+    "tags": ["Sci-Fi", "Cityscape", "Digital Art"],
+    "createdAt": "2023-08-15"
+  },
+  {
+    "id": 2,
+    "title": "Forest Spirit",
+    "description": "A mystical creature dwelling in an ancient, enchanted forest.",
+    "imageURL": "/images/art/forest_spirit.webp",
+    "author": "Artist B",
+    "tags": ["Fantasy", "Nature", "Creature"],
+    "createdAt": "2023-09-02"
+  },
+  {
+    "id": 3,
+    "title": "Abstract Waves",
+    "description": "A colorful representation of sound waves in an abstract form.",
+    "imageURL": "/images/art/abstract_waves.webp",
+    "author": "Artist C",
+    "tags": ["Abstract", "Colorful", "Minimalist"],
+    "createdAt": "2023-09-20"
+  }
+]
