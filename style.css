@@ -1034,12 +1034,12 @@ main {
     }
     
     .hero-header {
-        min-height: 80vh;
-        padding: 1rem;
+        min-height: auto;
+        padding: 2rem 1rem;
     }
     
     .header-content {
-        padding: 1rem;
+        padding: 2rem 1rem;
     }
     
     .glitch-title {
@@ -1047,7 +1047,8 @@ main {
     }
     
     .ozeu-logo-img {
-        max-width: 250px;
+        max-width: 70vw;
+        width: 100%;
     }
     
     .cyber-tagline {
@@ -1224,16 +1225,16 @@ main {
 
 @media (max-width: 480px) {
     body {
-        font-size: 13px;
+        font-size: 14px;
     }
     
     .hero-header {
-        min-height: 70vh;
-        padding: 0.5rem;
+        min-height: auto;
+        padding: 1.5rem 0.75rem;
     }
     
     .header-content {
-        padding: 0.5rem;
+        padding: 1.5rem 0.5rem;
     }
     
     .glitch-title {
@@ -1241,17 +1242,19 @@ main {
     }
     
     .ozeu-logo-img {
-        max-width: 180px;
+        max-width: 80vw;
+        width: 100%;
     }
     
     .cyber-tagline {
-        font-size: 0.75rem;
+        font-size: 1rem;
         padding: 0 0.5rem;
+        line-height: 1.5;
     }
     
     .stat-badge {
-        font-size: 0.65rem;
-        padding: 0.3rem 0.6rem;
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
     }
     
     .cyber-nav {
