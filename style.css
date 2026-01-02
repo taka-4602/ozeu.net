@@ -636,6 +636,27 @@ main {
     position: relative;
 }
 
+.tools-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+    .tools-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tools-grid {
+        gap: 1.5rem;
+    }
+}
+
 .tools-mascot {
     position: absolute;
     top: 2rem;
