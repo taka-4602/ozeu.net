@@ -52,74 +52,23 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 const imageList = [
-    {
-        file: "absolutely_destroy_the_server_ozeu_chan.png",
-        title: "absolutely_destroy_the_server_ozeu_chan"
-    },
-    {
-        file: "dadadada_tenshi.png",
-        title: "dadadada_tenshi"
-    },
-    {
-        file: "denpa_maid.png",
-        title: "denpa_maid"
-    },
-    {
-        file: "furo_hairu_profile.png",
-        title: "furo_hairu_profile"
-    },
-    {
-        file: "i_am_not_mentally_unstable.png",
-        title: "i_am_not_mentally_unstable"
-    },
-    {
-        file: "i_d_k.png",
-        title: "i_d_k"
-    },
-    {
-        file: "i_d_k_2.png",
-        title: "i_d_k_2"
-    },
-    {
-        file: "i_love_acvr.png",
-        title: "i_love_acvr"
-    },
-    {
-        file: "kyu_kurarin.png",
-        title: "kyu_kurarin"
-    },
-    {
-        file: "mon_mon_fan_mou_ran.png",
-        title: "mon_mon_fan_mou_ran"
-    },
-    {
-        file: "onii_chan_ha_oshimai.png",
-        title: "onii_chan_ha_oshimai"
-    },
-    {
-        file: "ozeu_is_here.png",
-        title: "ozeu_is_here"
-    },
-    {
-        file: "peropero_dick.jpeg",
-        title: "peropero_dick"
-    },
-    {
-        file: "senbon_sakura.png",
-        title: "senbon_sakura"
-    },
-    {
-        file: "take_medicine_and_go_to_sleep.png",
-        title: "take_medicine_and_go_to_sleep"
-    },
-    {
-        file: "telepathy.png",
-        title: "telepathy"
-    },
-    {
-        file: "trendy_ice_cream.png",
-        title: "trendy_ice_cream"
-    }
+    "absolutely_destroy_the_server_ozeu_chan.png",
+    "dadadada_tenshi.png",
+    "denpa_maid.png",
+    "furo_hairu_profile.png",
+    "i_am_not_mentally_unstable.png",
+    "i_d_k.png",
+    "i_d_k_2.png",
+    "i_love_acvr.png",
+    "kyu_kurarin.png",
+    "mon_mon_fan_mou_ran.png",
+    "onii_chan_ha_oshimai.png",
+    "ozeu_is_here.png",
+    "peropero_dick.jpeg",
+    "senbon_sakura.png",
+    "take_medicine_and_go_to_sleep.png",
+    "telepathy.png",
+    "trendy_ice_cream.png"
 ];
 
 function loadGallery() {
