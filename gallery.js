@@ -1,0 +1,205 @@
+// 背景のパララックス効果
+let ticking = false;
+window.addEventListener('scroll', () => {
+    if (!ticking) {
+        window.requestAnimationFrame(() => {
+            const scrolled = window.pageYOffset;
+            const parallaxSpeed = 0.7; // スクロール速度（大きくして効果強化）
+            document.body.style.backgroundPositionY = `${scrolled * parallaxSpeed}px`;
+            ticking = false;
+        });
+        ticking = true;
+    }
+});
+
+// 鬱猫界隈 ギャラリーページ
+console.log("Gallery page loaded! 🎨");
+
+// パーティクル生成（script.jsから）
+function createParticles() {
+    const container = document.getElementById('particles-container');
+    if (!container) return;
+
+    const particleCount = 50;
+    
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.animationDuration = (Math.random() * 10 + 5) + 's';
+        particle.style.animationDelay = Math.random() * 5 + 's';
+        particle.style.width = (Math.random() * 5 + 3) + 'px';
+        particle.style.height = particle.style.width;
+        container.appendChild(particle);
+    }
+}
+
+// スムーススクロール
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+const imageList = [
+    {
+        file: "absolutely_destroy_the_server_ozeu_chan.png",
+        title: "absolutely_destroy_the_server_ozeu_chan"
+    },
+    {
+        file: "dadadada_tenshi.png",
+        title: "dadadada_tenshi"
+    },
+    {
+        file: "denpa_maid.png",
+        title: "denpa_maid"
+    },
+    {
+        file: "furo_hairu_profile.png",
+        title: "furo_hairu_profile"
+    },
+    {
+        file: "i_am_not_mentally_unstable.png",
+        title: "i_am_not_mentally_unstable"
+    },
+    {
+        file: "i_d_k.png",
+        title: "i_d_k"
+    },
+    {
+        file: "i_d_k_2.png",
+        title: "i_d_k_2"
+    },
+    {
+        file: "i_love_acvr.png",
+        title: "i_love_acvr"
+    },
+    {
+        file: "kyu_kurarin.png",
+        title: "kyu_kurarin"
+    },
+    {
+        file: "mon_mon_fan_mou_ran.png",
+        title: "mon_mon_fan_mou_ran"
+    },
+    {
+        file: "onii_chan_ha_oshimai.png",
+        title: "onii_chan_ha_oshimai"
+    },
+    {
+        file: "ozeu_is_here.png",
+        title: "ozeu_is_here"
+    },
+    {
+        file: "peropero_dick.jpeg",
+        title: "peropero_dick"
+    },
+    {
+        file: "senbon_sakura.png",
+        title: "senbon_sakura"
+    },
+    {
+        file: "take_medicine_and_go_to_sleep.png",
+        title: "take_medicine_and_go_to_sleep"
+    },
+    {
+        file: "telepathy.png",
+        title: "telepathy"
+    },
+    {
+        file: "trendy_ice_cream.png",
+        title: "trendy_ice_cream"
+    }
+];
+
+function loadGallery() {
+    const container = document.getElementById('gallery-container');
+    if (!container) return;
+
+    imageList.forEach((filename, index) => {
+        const galleryItem = document.createElement('div');
+        galleryItem.className = 'gallery-item';
+        galleryItem.style.opacity = '0';
+        galleryItem.style.transform = 'translateY(50px)';
+        galleryItem.style.transition = 'all 0.6s ease';
+        galleryItem.style.transitionDelay = (index * 0.05) + 's';
+
+        const img = document.createElement('img');
+        img.src = `gallery_images/${filename}`;
+        img.alt = filename;
+        img.loading = 'lazy';
+        
+        // エラーとか
+        img.onerror = () => {
+            galleryItem.style.display = 'none';
+        };
+
+        galleryItem.appendChild(img);
+        container.appendChild(galleryItem);
+
+        // クリックで拡大表示
+        galleryItem.addEventListener('click', () => {
+            const overlay = document.createElement('div');
+            overlay.style.position = 'fixed';
+            overlay.style.top = '0';
+            overlay.style.left = '0';
+            overlay.style.width = '100%';
+            overlay.style.height = '100%';
+            overlay.style.backgroundColor = 'rgba(0,0,0,0.9)';
+            overlay.style.zIndex = '9999';
+            overlay.style.display = 'flex';
+            overlay.style.justifyContent = 'center';
+            overlay.style.alignItems = 'center';
+            overlay.style.cursor = 'pointer';
+            overlay.style.animation = 'fadeIn 0.3s ease';
+            
+            const enlargedImg = document.createElement('img');
+            enlargedImg.src = img.src;
+            enlargedImg.style.maxWidth = '90%';
+            enlargedImg.style.maxHeight = '90%';
+            enlargedImg.style.objectFit = 'contain';
+            enlargedImg.style.borderRadius = '10px';
+            enlargedImg.style.animation = 'slideUp 0.3s ease';
+            
+            overlay.appendChild(enlargedImg);
+            document.body.appendChild(overlay);
+            
+            overlay.addEventListener('click', () => {
+                overlay.style.animation = 'fadeOut 0.3s ease';
+                setTimeout(() => {
+                    document.body.removeChild(overlay);
+                }, 300);
+            });
+        });
+    });
+
+    setTimeout(() => {
+        const items = container.querySelectorAll('.gallery-item');
+        items.forEach(item => {
+            item.style.opacity = '1';
+            item.style.transform = 'translateY(0)';
+        });
+    }, 100);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const loadingScreen = document.querySelector('.loading-screen');
+    if (loadingScreen) {
+        loadingScreen.style.display = 'none';
+    }
+    
+    createParticles();
+    loadGallery();
+});
+
+console.log(`Loaded ${imageList.length} images! 🖼️`);

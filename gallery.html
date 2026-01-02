@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ギャラリー - おぜうの集い</title>
+    
+    <!-- OGP / Open Graph Protocol -->
+    <meta property="og:title" content="ギャラリー - おぜうの集い">
+    <meta property="og:description" content="ozeu-chanの可愛い表情とコミュニティの思い出をお楽しみください！">
+    <meta property="og:image" content="https://ozeu.net/icons/text.png">
+    <meta property="og:url" content="https://ozeu.net/gallery.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="おぜうの集い">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ギャラリー - おぜうの集い">
+    <meta name="twitter:description" content="ozeu-chanの可愛い表情とコミュニティの思い出をお楽しみください！">
+    <meta property="twitter:image" content="https://ozeu.net/icons/text.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="icons/text.png" type="image/png">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Glitch Background Effect -->
+    <div class="glitch-bg"></div>
+    <div class="scanlines"></div>
+    
+    <!-- Hero Header -->
+    <header class="hero-header" style="min-height: 50vh;">
+        <div class="cyber-grid"></div>
+        <div class="header-content">
+            <div class="glitch-container">
+                <img id="ozeu-logo" src="icons/text.png" alt="OZEU" class="ozeu-logo-img" style="max-width: 400px;">
+            </div>
+            <p class="cyber-tagline" style="font-size: 1.3rem;">
+                <span class="bracket">[</span>
+                <span class="text-highlight">OZEU</span> GALLERY
+                <span class="bracket">]</span>
+            </p>
+        </div>
+        <nav class="cyber-nav">
+            <a href="index.html" class="nav-item">&lt; HOME /&gt;</a>
+            <a href="gallery.html" class="nav-item">&lt; GALLERY /&gt;</a>
+            <a href="index.html#join" class="nav-item">&lt; JOIN /&gt;</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="gallery" class="cyber-section">
+            <div class="section-header">
+                <span class="section-number">##</span>
+                <h2 class="section-title">
+                    <span class="title-bracket">&lt;</span>
+                    GALLERY
+                    <span class="title-bracket">/&gt;</span>
+                </h2>
+            </div>
+            <p class="gallery-subtitle">
+                ozeu-chanのアート作品<br>
+                ファンアートも歓迎してます！
+            </p>
+            <div class="gallery-grid" id="gallery-container">
+                <!--画像ここ-->
+            </div>
+        </section>
+        
+        <!-- Join Section -->
+        <section id="links" class="cyber-section join-section">
+            <div class="join-mascot">
+                <img src="icons/links.png" alt="ozeu-chan links" class="links-mascot">
+            </div>
+            <div class="section-header">
+                <span class="section-number">></span>
+                <h2 class="section-title">
+                    <span class="title-bracket">&lt;</span>
+                    JOIN US
+                    <span class="title-bracket">/&gt;</span>
+                </h2>
+            </div>
+            
+            <div class="join-content">
+                <p class="join-text">
+                    ツールと仲間が待っている<br>
+                    今すぐ<span class="text-highlight">OZEU</span>に参加しよう！
+                </p>
+                
+                <div class="join-buttons">
+                    <a href="https://discord.gg/acvr" class="cyber-button discord-btn" target="_blank" rel="noopener noreferrer">
+                        <span class="btn-border"></span>
+                        <span class="btn-icon">💬</span>
+                        <span class="btn-text">JOIN DISCORD</span>
+                    </a>
+                    <a href="https://google.com" class="cyber-button twitter-btn" target="_blank" rel="noopener noreferrer">
+                        <span class="btn-border"></span>
+                        <span class="btn-icon">🐦</span>
+                        <span class="btn-text">FOLLOW TWITTER</span>
+                    </a>
+                    <a href="https://tools.ozeu.net" class="cyber-button secondary-btn" target="_blank" rel="noopener noreferrer">
+                        <span class="btn-border"></span>
+                        <span class="btn-icon">🔧</span>
+                        <span class="btn-text">VIEW TOOLS</span>
+                    </a>
+                </div>
+                
+                <div class="join-stats">
+                    <div class="stat-box">
+                        <div class="stat-value">9,000+</div>
+                        <div class="stat-name">MEMBERS</div>
+                    </div>
+                    <div class="stat-divider-vertical"></div>
+                    <div class="stat-box">
+                        <div class="stat-value">SUPPORT</div>
+                        <div class="stat-name">RAID TOOLS</div>
+                    </div>
+                    <div class="stat-divider-vertical"></div>
+                    <div class="stat-box">
+                        <div class="stat-value">24/7</div>
+                        <div class="stat-name">ACTIVE</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <script src="gallery.js"></script>
+</body>
+</html>
