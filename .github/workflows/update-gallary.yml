@@ -1,0 +1,37 @@
+name: Update Gallery Images List
+
+on:
+  push:
+    paths:
+      - 'gallery_images/**'
+  workflow_dispatch:
+
+jobs:
+  update-gallery:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          
+      - name: Generate image list
+        run: |
+          node scripts/generate-image-list.js
+          
+      - name: Commit changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add gallery.js
+          git diff --quiet && git diff --staged --quiet || git commit -m "🤖 Auto-update gallery image list"
+          
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
