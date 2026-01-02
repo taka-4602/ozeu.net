@@ -1075,27 +1075,27 @@ main {
     .cyber-nav {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 0.5rem;
-        padding: 1rem;
+        gap: 0.6rem;
+        padding: 1.5rem;
         width: 100%;
         max-width: 400px;
     }
     
     .nav-item {
-        font-size: 0.75rem;
-        padding: 0.6rem 0.8rem;
+        font-size: 0.95rem;
+        padding: 0.8rem 1rem;
         text-align: center;
         clip-path: none;
-        border-radius: 4px;
+        border-radius: 6px;
     }
     
     .section-title {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         letter-spacing: 1px;
     }
     
     .section-number {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
     
     .section-header {
@@ -1110,7 +1110,16 @@ main {
     }
     
     .cyber-text {
-        font-size: 0.95rem;
+        font-size: 1.1rem;
+        line-height: 1.7;
+    }
+    
+    .card-title {
+        font-size: 1.3rem;
+    }
+    
+    .card-text {
+        font-size: 1rem;
         line-height: 1.6;
     }
     
@@ -1151,14 +1160,22 @@ main {
     .join-buttons {
         flex-direction: column;
         align-items: center;
-        gap: 0.5rem;
+        gap: 0.8rem;
     }
     
     .cyber-button {
         width: 100%;
-        max-width: 300px;
-        font-size: 0.9rem;
-        padding: 0.8rem 1.5rem;
+        max-width: 320px;
+        font-size: 1.1rem;
+        padding: 1rem 1.5rem;
+    }
+    
+    .btn-text {
+        font-size: 1rem;
+    }
+    
+    .join-text {
+        font-size: 1.4rem;
     }
     
     .terminal-loader {
@@ -1213,7 +1230,11 @@ main {
     }
     
     .stat-value {
-        font-size: 2rem;
+        font-size: 2.5rem;
+    }
+    
+    .stat-name {
+        font-size: 1rem;
     }
     
     .gallery-grid {
@@ -1272,32 +1293,38 @@ main {
     
     .cyber-nav {
         grid-template-columns: repeat(2, 1fr);
-        padding: 0.5rem;
-        gap: 0.4rem;
-        max-width: 320px;
+        padding: 1rem 0.5rem;
+        gap: 0.5rem;
+        max-width: 100%;
+        width: 100%;
     }
     
     .nav-item {
-        font-size: 0.65rem;
-        padding: 0.5rem 0.5rem;
+        font-size: 0.85rem;
+        padding: 0.7rem 0.5rem;
     }
     
     .section-title {
-        font-size: 1rem;
+        font-size: 1.4rem;
         letter-spacing: 0.5px;
         word-break: break-word;
     }
     
     .section-number {
-        font-size: 1.3rem;
+        font-size: 2rem;
     }
     
     .section-header {
-        gap: 0.3rem;
+        gap: 0.5rem;
     }
     
     .cyber-section {
-        padding: 2rem 0.75rem !important;
+        padding: 2.5rem 1rem !important;
+    }
+    
+    .cyber-text {
+        font-size: 1.05rem;
+        line-height: 1.7;
     }
     
     .content-main {
@@ -1309,27 +1336,27 @@ main {
     }
     
     .card-icon img {
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
     }
     
     .card-title {
-        font-size: 1rem;
+        font-size: 1.2rem;
         letter-spacing: 1px;
     }
     
     .card-text {
-        font-size: 0.85rem;
+        font-size: 1rem;
     }
     
     .cyber-button {
-        font-size: 0.8rem;
-        padding: 0.6rem 1rem;
-        max-width: 280px;
+        font-size: 1rem;
+        padding: 0.9rem 1.2rem;
+        max-width: 300px;
     }
     
     .btn-text {
-        font-size: 0.8rem;
+        font-size: 0.95rem;
     }
     
     .gallery-grid {
@@ -1342,16 +1369,16 @@ main {
     }
     
     .join-text {
-        font-size: 1rem;
+        font-size: 1.2rem;
         margin-bottom: 2rem;
     }
     
     .stat-value {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
     
     .stat-name {
-        font-size: 0.75rem;
+        font-size: 0.9rem;
     }
 }
 
