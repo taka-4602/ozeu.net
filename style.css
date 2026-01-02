@@ -536,6 +536,32 @@ main {
     gap: 2rem;
 }
 
+@media (max-width: 768px) {
+    .FEATURES-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .FEATURES-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .card-icon img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .FEATURES-grid {
+        gap: 1.2rem;
+    }
+    
+    .FEATURES-card {
+        padding: 1.8rem 1.2rem;
+    }
+}
+
 .FEATURES-card {
     background: linear-gradient(135deg, rgba(22, 33, 62, 0.9), rgba(255, 139, 157, 0.2), rgba(112, 214, 255, 0.2));
     border: 2px solid var(--color-pink-light);
@@ -1147,10 +1173,6 @@ main {
     
     .power-card {
         padding: 1.5rem;
-    }
-    
-    .FEATURES-grid {
-        grid-template-columns: 1fr;
     }
     
     .tools-features {
